@@ -6,11 +6,12 @@ public class Message {
 
     private UUID id;
     private String content;
+    private String avatar;
 
-    public Message(String content) {
-        this.id = UUID.randomUUID();
-        this.content = content;
-    }
+    public Message () {
+        id = UUID.randomUUID();
+        avatar = "https://ui-avatars.com/api/?background=0D8ABC&color=fff";
+    };
 
     public UUID getId() {
         return id;
@@ -18,6 +19,10 @@ public class Message {
 
     public String getContent() {
         return content;
+    }
+
+    public String getAvatar() {
+        return avatar;
     }
 
 }
